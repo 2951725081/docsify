@@ -8,4 +8,6 @@
       - [CLASS](/大二下/oop/class.md)
     - [DB](/大二下/db)
     - [LCDF](/大二下/lcdf)
+      - [chapter2](/大二下/lcdf/chapter2.md)
+      - [chapter3](/大二下/lcdf/chapter3.md)
     - [DM](/大二下/dm)
