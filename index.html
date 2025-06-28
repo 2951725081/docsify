@@ -23,7 +23,7 @@
             // 项目名称
             //name: '学习',
             // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
-            //repo: ,
+            repo: 'https://github.com/2951725081',
             // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
             loadSidebar: true,
             sidebarDisplayLevel: 0,
@@ -35,7 +35,7 @@
             // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
             coverpage: true,
             // 最大支持渲染的标题层级
-            maxLevel: 5,
+            maxLevel: 3,
             // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
             subMaxLevel: 3,
             // 小屏设备下合并导航栏到侧边栏
@@ -116,6 +116,37 @@
   </script>
   <!--字数统计-->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+  <div class="demo-theme-preview">
+    <a data-theme="vue">vue.css</a>
+    <a data-theme="buble">buble.css</a>
+    <a data-theme="dark">dark.css</a>
+    <a data-theme="pure">pure.css</a>
+    <a data-theme="docsify-themeable">docsify-themeable.css</a>
+  </div>
+
+
+  <style>
+    .demo-theme-preview a {
+      padding-right: 10px;
+    }
+    .demo-theme-preview a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+      var preview = Docsify.dom.find('.demo-theme-preview');
+      var themes = Docsify.dom.findAll('[rel="stylesheet"]');
+      preview.onclick = function (e) {
+        var title = e.target.getAttribute('data-theme')
+
+        themes.forEach(function (theme) {
+          theme.disabled = theme.title !== title
+        });
+      };
+  </script>
   
 
 </body>
